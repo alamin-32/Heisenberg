@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "gemstone amethyst",
+        "price": 4500,
+        "ratings": 5,
+        "img": "https://cdn.pixabay.com/photo/2016/08/07/13/35/gem-1576233__340.jpg",
+        "details": ""
+    },
+    {
+        "id": 2,
+        "name": "Sajek Valley",
+        "price": 6500,
+        "ratings": 5,
+        "img": "https://i.ibb.co/4Nv37R4/google2.png",
+        "details": "Sajek Tripuri Valley is one of the most popular tourist spots in Bangladesh situated among the hills of the Kasalong range of mountains in Sajek union, Baghaichhari Upazila in Rangamati District. The valley is 2,000 feet above sea level. Sajek Tripuri Valley is known as the Queen of Hills & Roof of Rangamati."
+    },
+    {
+        "id": 3,
+        "name": "Rangamati",
+        "price": 4500,
+        "ratings": 5,
+        "img": "https://i.ibb.co/FqX8T7j/google1.png",
+        "details": "Rangamati; is the administrative headquarters of Rangamati Hill District in the Chittagong Hill Tracts of Bangladesh. The town is located at 22°37'60N 92°12'0E and has an altitude of 14 metres. The district is administered by an office named as District Administration, Rangamati."
+    }
+]
