@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import auth from '../../../firebase.init'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
@@ -9,21 +9,13 @@ const Signup = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [error, setError] = useState('');
 
     const [createUserWithEmailAndPassword,
         user,
-        loading,
-        error,
+        loading
     ] = useCreateUserWithEmailAndPassword(auth);
-
-    if (user) {
-        return (
-            <div>
-                Registered user: {user.email}
-            </div>
-        )
-    }
-
+    const navigate = useNavigate();
 
     const handleEmail = event => {
         setEmail(event.target.value);
@@ -37,7 +29,20 @@ const Signup = () => {
 
     const handleCreateUser = (event) => {
         event.preventDefault();
+        if (password !== confirmPassword) {
+            setError("Password Invalid")
+        }
+        if (password.length < 0) {
+            setError("Password Too Short")
+            return;
+        }
         createUserWithEmailAndPassword(email, password);
+    }
+    if (user) {
+        navigate("/home")
+    }
+    if (error){
+
     }
 
     return (
@@ -60,7 +65,7 @@ const Signup = () => {
                             LogIn Now
                         </Link>
                     </p>
-                    <input type="submit" value="Sign Up" />
+                    <input className='btn btn-primary' type="submit" value="Sign Up" />
                     <GoogleSignIn></GoogleSignIn>
                 </form>
             </div>

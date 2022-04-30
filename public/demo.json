@@ -1,26 +1,82 @@
 [
     {
-        "id": 1,
-        "name": "gemstone amethyst",
-        "price": 4500,
-        "ratings": 5,
-        "img": "https://cdn.pixabay.com/photo/2016/08/07/13/35/gem-1576233__340.jpg",
-        "details": ""
+        "name": "Consectetur Hampden",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/1/9/119-large_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "83$",
+        "supplier": "heisenberg"
     },
     {
-        "id": 2,
-        "name": "Sajek Valley",
-        "price": 6500,
-        "ratings": 5,
-        "img": "https://i.ibb.co/4Nv37R4/google2.png",
-        "details": "Sajek Tripuri Valley is one of the most popular tourist spots in Bangladesh situated among the hills of the Kasalong range of mountains in Sajek union, Baghaichhari Upazila in Rangamati District. The valley is 2,000 feet above sea level. Sajek Tripuri Valley is known as the Queen of Hills & Roof of Rangamati."
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/1/8/118-large_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "100",
+        "supplier": "heisenberg"
     },
     {
-        "id": 3,
-        "name": "Rangamati",
-        "price": 4500,
-        "ratings": 5,
-        "img": "https://i.ibb.co/FqX8T7j/google1.png",
-        "details": "Rangamati; is the administrative headquarters of Rangamati Hill District in the Chittagong Hill Tracts of Bangladesh. The town is located at 22°37'60N 92°12'0E and has an altitude of 14 metres. The district is administered by an office named as District Administration, Rangamati."
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/2/0/120-large_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "145",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/2/2/122-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "135",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/2/3/123-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "110",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/2/0/9/209-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "85",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/1/8/118-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "90",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/7/3/173-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "70",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/7/4/174-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "90",
+        "supplier": "heisenberg"
+    },
+    {
+        "name": "Leanne Graham",
+        "img": "https://capricathemes.com/prestashop/PRS13/PRS130306/PRS02/img/p/1/7/8/178-home_default.jpg",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi",
+        "quantity": "10",
+        "price": "100",
+        "supplier": "heisenberg"
     }
 ]
