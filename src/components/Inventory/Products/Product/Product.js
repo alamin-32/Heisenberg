@@ -1,10 +1,16 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
+import { Link, useNavigate } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { img, name, description, quantity, supplier, price
+    const { _id, img, name, description, quantity, supplier, price
     } = product;
+    const navigate = useNavigate();
+
+    const updateProducts = id => {
+        navigate(`/products/${id}`)
+    }
     return (
         <div className='col-lg-4 mb-3 ml-3 container'>
             <Card>
@@ -17,7 +23,7 @@ const Product = ({ product }) => {
                         <p>Price:{price}</p>
                         <p>Supplier: {supplier}</p>
                     </Card.Text>
-                    <Button variant="primary"><Link className='text-white' to='/order'>Update</Link></Button>
+                    <Button onClick={() => updateProducts(_id)} variant="primary"><Link className='text-white' to='/order'>Update</Link></Button>
                 </Card.Body>
             </Card>
         </div>

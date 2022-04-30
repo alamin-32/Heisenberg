@@ -1,9 +1,10 @@
-import React from 'react';
+
+
 
 const Order = () => {
     return (
         <div>
-            <h1>Order page</h1>
+            <h1 className='text-center'>Your Inventory</h1>
         </div>
     );
 };

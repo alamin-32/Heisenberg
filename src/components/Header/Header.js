@@ -7,10 +7,12 @@ import auth from '../../firebase.init';
 import './Header.css'
 
 const Header = () => {
-    const [user] = useAuthState(auth)
+    const [user] = useAuthState(auth);
+
     const logOut = () => {
         signOut(auth);
     }
+
     return (
         <div className='sticky-top bg-color'>
             <Navbar bg="bg-color" expand="lg">
@@ -23,7 +25,16 @@ const Header = () => {
                             <Nav.Link as={Link} to="/products"><span className='color'>Products</span></Nav.Link>
                         </Nav>
                         <Nav>
+                            {
+                                user && <>
+                                    <Nav.Link as={Link} to="/manageItem"><span className='color'>Manage</span></Nav.Link>
+                                </>
+
+                            }
+
+
                             <Nav.Link as={Link} to="/blogs"><span className='color'>Blogs</span></Nav.Link>
+
                             {
                                 user ?
                                     <button onClick={logOut}><span className='color'>LogOut</span> </button>
