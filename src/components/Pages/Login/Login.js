@@ -54,10 +54,10 @@ const Login = () => {
                             SignUp Now
                         </Link>
                     </p>
-                    {/* <p>
+                    <p>
                         Forgot password?
-                        <Link to='/login'>Reset password</Link>
-                    </p> */}
+                        <Link to='/resetPass'>Reset password</Link>
+                    </p>
                     <button type="submit" className="btn btn-primary">LogIn</button>
                     <GoogleSignIn></GoogleSignIn>
                 </form>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './DeleteProductCart.css'
 
 const DeleteProductCArt = ({ product }) => {
@@ -7,24 +8,22 @@ const DeleteProductCArt = ({ product }) => {
 
     const handleProductsDelete = id => {
         const proceed = window.confirm('Are you sure?')
-        // if (proceed) {
-
-        // }
-
-        const url = `http://localhost:5000/products/${id}`
-        fetch(url, {
-            method: 'DELETE',
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                if (data.deletedCount > 0) {
-                    console.log('deleted')
-                    const remaining = products.filter(products => products._id !== id)
-                    setProducts(remaining)
-                }
-
+        if (proceed) {
+            const url = `http://localhost:5000/products/${id}`
+            fetch(url, {
+                method: 'DELETE',
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        const remaining = products.filter(product => product._id !== id)
+                        setProducts(remaining)
+                    }
+
+                })
+        }
+
+
 
 
     }
@@ -33,6 +32,7 @@ const DeleteProductCArt = ({ product }) => {
             <div className='dlt-cart'>
                 <img className='dlt-img' src={img} alt="" />
                 <h3>{name}</h3>
+                <Link to={`/updateProduct/${product._id}`}><button className='btn btn-primary ms-3'>Update</button></Link>
                 <button onClick={() => handleProductsDelete(product._id)} className='btn btn-primary ms-3'>Remove</button>
             </div>
 

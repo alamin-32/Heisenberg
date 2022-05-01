@@ -4,8 +4,9 @@ import { useForm } from "react-hook-form";
 
 const ProductAdd = () => {
     const { register, handleSubmit } = useForm();
+
+
     const onSubmit = data => {
-        console.log(data);
         fetch('http://localhost:5000/products', {
             method: "POST",
             headers: {
@@ -16,6 +17,8 @@ const ProductAdd = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                alert("Product Updated");
+                data.target.reset();
             })
 
     }

@@ -9,7 +9,7 @@ const Product = ({ product }) => {
     const navigate = useNavigate();
 
     const updateProducts = id => {
-        navigate(`/products/${id}`)
+        navigate(`/updateProduct/${id}`)
     }
     return (
         <div className='col-lg-4 mb-3 ml-3 container'>
@@ -23,7 +23,7 @@ const Product = ({ product }) => {
                         <p>Price:{price}</p>
                         <p>Supplier: {supplier}</p>
                     </Card.Text>
-                    <Button onClick={() => updateProducts(_id)} variant="primary"><Link className='text-white' to='/order'>Update</Link></Button>
+                    <Button onClick={() => updateProducts(_id)} variant="primary"><Link className='text-white' to='/updateProduct/:id'>Deliver</Link></Button>
                 </Card.Body>
             </Card>
         </div>
