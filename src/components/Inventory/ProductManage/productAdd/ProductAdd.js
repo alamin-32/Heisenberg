@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 const ProductAdd = () => {
     const { register, handleSubmit } = useForm();
 
-
     const onSubmit = data => {
         fetch('http://localhost:5000/products', {
             method: "POST",
@@ -18,7 +17,7 @@ const ProductAdd = () => {
             .then(result => {
                 console.log(result);
                 alert("Product Updated");
-                data.target.reset();
+                // data.target.reset();
             })
 
     }

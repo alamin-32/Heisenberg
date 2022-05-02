@@ -1,23 +1,41 @@
 import React, { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import GoogleSignIn from '../GoogleSignIn/GoogleSignIn';
+import Loading from '../Loading/Loading';
+import './Login.css'
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
+
     const [
         signInWithEmailAndPassword,
+        error,
         user,
         loading
     ] = useSignInWithEmailAndPassword(auth);
 
-    // const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
-    //     auth
-    // );
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+
+    if (user) {
+        navigate(from, { replace: true })
+    }
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+
+    if (loading) {
+        return <Loading></Loading>;
+    }
 
 
     const handleEmail = event => {
@@ -31,9 +49,11 @@ const Login = () => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password)
     }
-    if (user) {
-        navigate('/home')
-    }
+
+
+
+
+
 
     return (
         <div className='container w-50'>
@@ -48,6 +68,9 @@ const Login = () => {
                         <label htmlFor="password" className="form-label">Password</label>
                         <input onBlur={handlePassword} type="password" className="form-control" placeholder='Your Password' required id="exampleInputPassword1"></input>
                     </div>
+                    <p className='error-msg'>
+                        {error?.message}
+                    </p>
                     <p>
                         New to this site?
                         <Link to='/signup'>

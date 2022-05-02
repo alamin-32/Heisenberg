@@ -14,6 +14,7 @@ import NotFound from './components/NotFound/NotFound';
 import Login from './components/Pages/Login/Login';
 import ResetPass from './components/Pages/ResetPass/ResetPass';
 import Signup from './components/Pages/Signup/Signup';
+import RequiredAuth from './components/RequiredAuth/RequiredAuth';
 
 function App() {
   return (
@@ -24,9 +25,16 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/home' element={<Home></Home>}></Route>
           <Route path='/products' element={<Products></Products>}></Route>
-          {/* <Route path='/products/:_id' element={<Order></Order>}></Route> */}
-          <Route path='/updateProduct/:id' element={<UpdateProduct></UpdateProduct>}></Route>
-          <Route path='/manageItem' element={<ManageItem></ManageItem>}></Route>
+          <Route path='/updateProduct/:id' element={
+            <RequiredAuth>
+              <UpdateProduct></UpdateProduct>
+            </RequiredAuth>}>
+          </Route>
+          <Route path='/manageItem' element={
+            <RequiredAuth>
+              <ManageItem></ManageItem>
+            </RequiredAuth>}>
+          </Route>
           <Route path='/productAdd' element={<ProductAdd></ProductAdd>}></Route>
           <Route path='/productDelete' element={<ProductDelete></ProductDelete>}></Route>
           <Route path='/blogs' element={<Blogs></Blogs>}></Route>

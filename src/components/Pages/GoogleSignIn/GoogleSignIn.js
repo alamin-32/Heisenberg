@@ -21,10 +21,11 @@ const GoogleSignIn = () => {
                 <img className='google-logo' src={google} alt="" />
                 <h5 className='go-font'>Google Sign In</h5>
             </button>
-            <button className="google-signIn">
+            
+            {/* <button className="google-signIn">
                 <img className='google-logo' src={facebook} alt="" />
                 <h5 className='go-font'>Facebook Sign In</h5>
-            </button>
+            </button> */}
 
         </div>
     );

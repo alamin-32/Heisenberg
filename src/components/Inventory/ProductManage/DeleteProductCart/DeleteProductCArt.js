@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import useProducts from '../../../Hook/UseProducts';
 import './DeleteProductCart.css'
 
 const DeleteProductCArt = ({ product }) => {
     const { img, name } = product
-    const [products, setProducts] = useState({})
+    const { products, setProducts} = useProducts()
 
     const handleProductsDelete = id => {
         const proceed = window.confirm('Are you sure?')
@@ -18,6 +19,7 @@ const DeleteProductCArt = ({ product }) => {
                     if (data.deletedCount > 0) {
                         const remaining = products.filter(product => product._id !== id)
                         setProducts(remaining)
+                       
                     }
 
                 })
