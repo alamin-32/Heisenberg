@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useProducts from '../../Hook/UseProducts';
 import Product from './Product/Product';
+import './Products.css'
 
 const Products = () => {
     const { products } = useProducts()
 
     return (
-        <div>
+        <div className='products-container'>
             <h1 className='text-center my-5'>Our Products</h1>
             <div className='row'>
                 {
-
-                    // products.map(product => <Product product={product}></Product>)
-                    // :
-                    products.map(product => <Product
+                    products.slice(0, 6).map(product => <Product
                         key={product._id}
                         product={product}>
                     </Product>)

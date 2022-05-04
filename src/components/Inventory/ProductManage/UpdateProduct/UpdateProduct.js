@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import DeliverProduct from '../deliverProduct/DeliverProduct';
 import './UpdateProduct.css'
 
 const UpdateProduct = () => {
@@ -61,6 +61,7 @@ const UpdateProduct = () => {
                         <h6>Supplier: <span>{product.supplier}</span></h6>
                     </div>
                 </div >
+                <DeliverProduct></DeliverProduct>
             </div>
         </div >
     );

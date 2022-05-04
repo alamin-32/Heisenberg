@@ -10,3 +10,25 @@
 .product-img-container {
     margin-left: 40px;
 }
+
+.add-quantity {
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    padding: 3px 8px;
+    color: #F3F3F3;
+    font-weight: 500;
+
+}
+
+.deliver-btn {
+    background-color: #E8335D;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    color: #F3F3F3;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

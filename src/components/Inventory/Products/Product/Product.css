@@ -1,0 +1,24 @@
+.order-btn {
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.order-btn:hover {
+    background-color: #E8335D;
+}
+
+.btn-text {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffffff;
+}

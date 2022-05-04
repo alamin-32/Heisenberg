@@ -19,9 +19,7 @@ const DeleteProductCArt = ({ product }) => {
                     if (data.deletedCount > 0) {
                         const remaining = products.filter(product => product._id !== id)
                         setProducts(remaining)
-
                     }
-
                 })
         }
 
@@ -41,7 +39,7 @@ const DeleteProductCArt = ({ product }) => {
                     </div>
                 </div>
                 <div >
-                    <Link to={`/updateProduct/${product._id}`}><button className='update-btn ms-3'>Update</button></Link>
+                    {/* <Link to={`/updateProduct/${product._id}`}><button className='update-btn ms-3'>Update</button></Link> */}
                     <button onClick={() => handleProductsDelete(product._id)} className='remove-btn ms-3'>Remove</button>
                 </div>
             </div>
