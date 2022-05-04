@@ -4,8 +4,8 @@ import useProducts from '../../../Hook/UseProducts';
 import './DeleteProductCart.css'
 
 const DeleteProductCArt = ({ product }) => {
-    const { img, name } = product
-    const { products, setProducts} = useProducts()
+    const { img, name, description, price, quantity } = product
+    const { products, setProducts } = useProducts()
 
     const handleProductsDelete = id => {
         const proceed = window.confirm('Are you sure?')
@@ -19,7 +19,7 @@ const DeleteProductCArt = ({ product }) => {
                     if (data.deletedCount > 0) {
                         const remaining = products.filter(product => product._id !== id)
                         setProducts(remaining)
-                       
+
                     }
 
                 })
@@ -30,12 +30,20 @@ const DeleteProductCArt = ({ product }) => {
 
     }
     return (
-        <div>
-            <div className='dlt-cart'>
-                <img className='dlt-img' src={img} alt="" />
-                <h3>{name}</h3>
-                <Link to={`/updateProduct/${product._id}`}><button className='btn btn-primary ms-3'>Update</button></Link>
-                <button onClick={() => handleProductsDelete(product._id)} className='btn btn-primary ms-3'>Remove</button>
+        <div className='col-sm-12'>
+            <div className=' dlt-cart'>
+                <div className='dlt-img-container '>
+                    <img className='dlt-img' src={img} alt="" />
+                    <div>
+                        <h3>{name}</h3>
+                        {/* <h6>Price: {price}</h6>
+                        <h6>Quantity: {quantity}</h6> */}
+                    </div>
+                </div>
+                <div >
+                    <Link to={`/updateProduct/${product._id}`}><button className='update-btn ms-3'>Update</button></Link>
+                    <button onClick={() => handleProductsDelete(product._id)} className='remove-btn ms-3'>Remove</button>
+                </div>
             </div>
 
         </div>

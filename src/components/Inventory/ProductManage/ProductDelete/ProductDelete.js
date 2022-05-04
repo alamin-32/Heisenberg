@@ -12,7 +12,6 @@ const ProductDelete = () => {
     }, [])
     return (
         <div>
-            <h1>Remove Product</h1>
             {
                 products.map(product => <DeleteProductCArt key={product._id}
                     product={product}></DeleteProductCArt>)
