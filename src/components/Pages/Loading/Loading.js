@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Spinner } from 'react-bootstrap';
+import './Loading.css'
 
 const Loading = () => {
     return (
-        <div className='text-center'>
+        <div className='text-center loading'>
             <>
                 <Button variant="primary" disabled>
                     <Spinner

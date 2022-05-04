@@ -1,0 +1,24 @@
+.add-container {
+    background-color: #2B353C;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.add-form {
+    margin-bottom: 8px;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.add-product {
+    padding: 8px 10px;
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+}

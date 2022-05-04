@@ -5,3 +5,10 @@
 .color {
     color: #FFFFFF;
 }
+
+.logout-btn {
+    color: #E8335D;
+    font-weight: 500;
+    border: none;
+    border-radius: 250px;
+}

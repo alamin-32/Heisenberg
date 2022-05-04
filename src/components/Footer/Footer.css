@@ -1,4 +1,19 @@
 .footer {
-    height: 130px;
-    background-color: black;
+    height: 100px;
+    background-color: #000000;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.foo-text-1 {
+    color: #696769;
+}
+
+.foo-text-2 {
+    color: #FFEFBD;
 }

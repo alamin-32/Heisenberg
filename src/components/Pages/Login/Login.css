@@ -1,3 +1,40 @@
 .error-msg {
     color: red;
 }
+
+.decoration {
+    text-decoration: none;
+    margin-left: 5px;
+    color: #E8335D;
+    font-weight: 500;
+}
+
+.login-container {
+    font-weight: 500;
+}
+
+.login-btn {
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.login-text {
+    font-size: 18px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffffff;
+
+}

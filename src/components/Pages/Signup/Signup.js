@@ -60,7 +60,7 @@ const Signup = () => {
     }
 
     return (
-        <div className='container w-50'>
+        <div className='container col-md-6 signup-container'>
             <div className='signup-form'>
 
                 <form onSubmit={handleCreateUser}>
@@ -79,11 +79,14 @@ const Signup = () => {
 
                     <p>
                         Already Registered ?
-                        <Link to='/login'>
+                        <Link className='decoration' to='/login'>
                             LogIn Now
                         </Link>
                     </p>
-                    <input className='btn btn-primary' type="submit" value="Sign Up" />
+                    <div className='btn-container'>
+                        <button type="submit" className="login-btn container"><h5 className='login-text'>Sign Up</h5></button>
+                    </div>
+                    <p className='text-center mt-4 mb-3'>Or</p>
                     <GoogleSignIn></GoogleSignIn>
                 </form>
             </div>

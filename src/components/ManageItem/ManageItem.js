@@ -11,9 +11,9 @@ const ManageItem = () => {
                 <div>
                     <ProductDelete></ProductDelete>
                 </div>
-                <div>
+                {/* <div>
                     <ProductAdd></ProductAdd>
-                </div>
+                </div> */}
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './ProductAdd.css'
 
 
 const ProductAdd = () => {
@@ -25,17 +26,19 @@ const ProductAdd = () => {
 
 
     return (
-        <div className='mb-5'>
-            <h1>Add your Product</h1>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-2' placeholder='Photo Url' type="text" {...register("img")} />
-                <input className='mb-2' placeholder='Product Name' {...register("name")} />
-                <textarea className='mb-2' placeholder='Description' {...register("description")} />
-                <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
-                <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
-                <input className='mb-2' placeholder='Supplier Name' {...register("supplier Name")} />
-                <input className='mb-2' type="submit" value="add products" />
-            </form>
+        <div className='add-container'>
+            <div className='container  col-md-6 add-container'>
+                <h1 className='text-center my-4'>Add your Product</h1>
+                <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                    <input className=' add-form' placeholder='Photo Url' type="text" {...register("img")} />
+                    <input className=' add-form' placeholder='Product Name' {...register("name")} />
+                    <textarea className='add-form' placeholder='Description' {...register("description")} />
+                    <input className='add-form' placeholder='Price' type="number" {...register("price")} />
+                    <input className='add-form' placeholder='Quantity' type="number" {...register("quantity")} />
+                    <input className='add-form' placeholder='Supplier Name' {...register("supplier Name")} />
+                    <input className='mb-2 w-50 mx-auto add-product' type="submit" value="Add products" />
+                </form>
+            </div>
         </div>
     );
 };

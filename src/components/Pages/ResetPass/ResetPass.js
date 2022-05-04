@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import auth from '../../../firebase.init';
 
 
@@ -28,7 +29,8 @@ const ResetPass = () => {
 
 
     return (
-        <div className='container w-50'>
+        <div className='container col-md-6'>
+            <h1 className='text-center m-4'>Reset Your Password</h1>
             <form >
                 <div className="mb-3 ">
                     <label htmlFor="email" >Email</label>
@@ -37,7 +39,7 @@ const ResetPass = () => {
                 <button
                     onClick={async () => {
                         await sendPasswordResetEmail(email);
-                        alert('Sent email');
+                        toast("Password Send Successfully");
                     }} type="submit" className="btn btn-primary">Send Password</button>
             </form>
             <ToastContainer />

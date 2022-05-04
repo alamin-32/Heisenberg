@@ -15,16 +15,18 @@ const Login = () => {
         error,
         user,
         loading
-    ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const navigate = useNavigate();
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
 
     if (user) {
+        console.log(user);
         navigate(from, { replace: true })
-    }
 
+    }
+    console.log(user);
     if (error) {
         return (
             <div>
@@ -56,10 +58,10 @@ const Login = () => {
 
 
     return (
-        <div className='container w-50'>
+        <div className='container  col-md-6  login-container'>
             <div className='login-form'>
                 <form onSubmit={handleSignIn}>
-                    <h1 className='text-center my-4'>Login Form</h1>
+                    <h1 className='text-center my-4 title'>Login Form</h1>
                     <div className="mb-3 ">
                         <label htmlFor="email" >Email</label>
                         <input onBlur={handleEmail} type="email" className="form-control" placeholder='Your Email' id="exampleInputEmail1" required aria-describedby="emailHelp"></input>
@@ -71,17 +73,21 @@ const Login = () => {
                     <p className='error-msg'>
                         {error?.message}
                     </p>
-                    <p>
+                    <p className='text-color'>
                         New to this site?
-                        <Link to='/signup'>
+                        <Link className='decoration' to='/signup'>
                             SignUp Now
                         </Link>
                     </p>
                     <p>
                         Forgot password?
-                        <Link to='/resetPass'>Reset password</Link>
+                        <Link className='decoration' to='/resetPass'>Reset password</Link>
                     </p>
-                    <button type="submit" className="btn btn-primary">LogIn</button>
+
+                    <div className='btn-container'>
+                        <button type="submit" className="login-btn container"><h5 className='login-text'>Log In</h5></button>
+                    </div>
+                    <p className='text-center mt-4 mb-3'>Or</p>
                     <GoogleSignIn></GoogleSignIn>
                 </form>
             </div>
