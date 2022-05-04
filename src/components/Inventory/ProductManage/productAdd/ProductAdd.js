@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from "react-hook-form";
 import './ProductAdd.css'
 
 
 const ProductAdd = () => {
     const { register, handleSubmit } = useForm();
+    const [products, setProducts] = useState({})
+    useEffect(() => {
+        const url = `http://localhost:5000/products`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [products])
+    // console.log(products);
 
-    const onSubmit = data => {
+    const onSubmit = (event) => {
+        const name = event => event.target.name.value
+        const price = event => event.target.price.value
+        const img = event => event.target.img.value
+        const quantity = event => event.target.quantity.value
+        const description = event => event.target.description.value
+        const supplier = event => event.target.supplier.value
+        const data = {
+            name: name,
+            price: price,
+            img: img,
+            quantity: quantity,
+            description: description,
+            supplier: supplier
+        }
+
         fetch('http://localhost:5000/products', {
             method: "POST",
             headers: {
@@ -18,7 +41,7 @@ const ProductAdd = () => {
             .then(result => {
                 console.log(result);
                 alert("Product Updated");
-                // data.target.reset();
+                
             })
 
     }

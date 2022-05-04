@@ -5,13 +5,14 @@ import './UpdateProduct.css'
 
 const UpdateProduct = () => {
     const { id } = useParams();
-    const [product, setProduct] = useState({})
+    const [products, setProducts] = useState({})
     useEffect(() => {
         const url = `http://localhost:5000/products/${id}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setProduct(data))
-    }, [id])
+            .then(data => setProducts(data))
+    }, [products])
+    // console.log(products);
 
     const handleUpdateProducts = event => {
         event.preventDefault();
@@ -38,8 +39,8 @@ const UpdateProduct = () => {
 
     return (
         <div className='updateProduct-container col-lg-12 col-md-6'>
-            <h3 className='text-center'>Product Update : {product.name}</h3>
-            <h4 className='text-center'> Quantity:  {product.quantity}</h4>
+            <h3 className='text-center'>Product Update : {products.name}</h3>
+            <h4 className='text-center'> Quantity:  {products.quantity}</h4>
             <div className='text-center'>
                 <form onSubmit={handleUpdateProducts}>
                     <input type="number" name="quantity" id="" />
@@ -51,14 +52,14 @@ const UpdateProduct = () => {
                 <div className='update-product-cart container'>
 
                     <div className='product-img-container'>
-                        <img className='product-img mx-auto' src={product.img} alt="" />
+                        <img className='product-img mx-auto' src={products.img} alt="" />
                     </div>
                     <div className=' '>
-                        <h3>{product.name}</h3>
-                        <p> {product.description}</p>
-                        <h6>Quantity: <span>{product.quantity}</span></h6>
-                        <h6>Price: <span>{product.price}</span></h6>
-                        <h6>Supplier: <span>{product.supplier}</span></h6>
+                        <h3>{products.name}</h3>
+                        <p> {products.description}</p>
+                        <h6>Quantity: <span>{products.quantity}</span></h6>
+                        <h6>Price: <span>{products.price}</span></h6>
+                        <h6>Supplier: <span>{products.supplier}</span></h6>
                     </div>
                 </div >
                 <DeliverProduct></DeliverProduct>

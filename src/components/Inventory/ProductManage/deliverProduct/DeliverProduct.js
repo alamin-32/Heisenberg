@@ -4,14 +4,15 @@ import { useParams } from 'react-router-dom';
 const DeliverProduct = () => {
     const { id } = useParams()
     const [products, setProducts] = useState({})
+    console.log(products);
     useEffect(() => {
         const url = `http://localhost:5000/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
-    }, [id])
+    }, [products])
 
-    const handleDeliverProduct = () => {
+    const handleDeliverProduct = (event) => {
         const quantity = parseInt(products.quantity) - 1
         fetch(`http://localhost:5000/products/${id}`, {
             method: "PUT",
@@ -22,11 +23,8 @@ const DeliverProduct = () => {
         })
             .then(res => res.json())
             .then(result => {
-                console.log(result);
-                // if (result.modifiedCount === 1) {
-                //     setProducts(result)
-
-                // }
+                console.log(result)
+                setProducts(result)
             })
 
 

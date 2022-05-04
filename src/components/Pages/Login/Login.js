@@ -15,18 +15,13 @@ const Login = () => {
         error,
         user,
         loading
-    ] = useSignInWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useSignInWithEmailAndPassword(auth);
 
     const navigate = useNavigate();
-    const location = useLocation()
+    const location = useLocation();
     const from = location.state?.from?.pathname || '/'
 
-    if (user) {
-        console.log(user);
-        navigate(from, { replace: true })
 
-    }
-    console.log(user);
     if (error) {
         return (
             <div>
@@ -51,6 +46,10 @@ const Login = () => {
         event.preventDefault();
         signInWithEmailAndPassword(email, password)
     }
+    if (user) {
+        navigate(from, { replace: true })
+    }
+    console.log(user);
 
 
 
