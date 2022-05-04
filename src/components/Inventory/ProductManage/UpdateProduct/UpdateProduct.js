@@ -37,32 +37,30 @@ const UpdateProduct = () => {
 
 
     return (
-        <div>
-            <h1>Product Update : {product.name}</h1>
-            <h1> Quantity:  {product.quantity}</h1>
+        <div className='updateProduct-container col-lg-12 col-md-6'>
+            <h3 className='text-center'>Product Update : {product.name}</h3>
+            <h4 className='text-center'> Quantity:  {product.quantity}</h4>
+            <div className='text-center'>
+                <form onSubmit={handleUpdateProducts}>
+                    <input type="number" name="quantity" id="" />
+                    <input className='add-quantity' type="submit" value="Add Quantity" />
+                </form>
+            </div>
+
             <div className='deliver-product'>
-                <div className='col-lg-4 mb-3 ml-3 container'>
-                    <Card>
-                        <Card.Img variant="top" src={product.img} />
-                        <Card.Body>
-                            <Card.Title>{product.name}</Card.Title>
-                            <Card.Text>
-                                {product.description}
-                                <p>Quantity:{product.quantity}</p>
-                                <p>Price:{product.price}</p>
-                                <p>Supplier: {product.supplier}</p>
-                            </Card.Text>
-                            <Button
-                                variant="primary">Deliver</Button >
-                        </Card.Body >
-                    </Card >
+                <div className='update-product-cart container'>
+
+                    <div className='product-img-container'>
+                        <img className='product-img mx-auto' src={product.img} alt="" />
+                    </div>
+                    <div className=' '>
+                        <h3>{product.name}</h3>
+                        <p> {product.description}</p>
+                        <h6>Quantity: <span>{product.quantity}</span></h6>
+                        <h6>Price: <span>{product.price}</span></h6>
+                        <h6>Supplier: <span>{product.supplier}</span></h6>
+                    </div>
                 </div >
-                <div>
-                    <form onSubmit={handleUpdateProducts}>
-                        <input type="number" name="quantity" id="" />
-                        <input type="submit" value="Update Product" />
-                    </form>
-                </div>
             </div>
         </div >
     );
