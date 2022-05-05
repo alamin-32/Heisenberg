@@ -7,7 +7,7 @@ const ProductAdd = () => {
     const { register, handleSubmit } = useForm();
     const [products, setProducts] = useState({})
     useEffect(() => {
-        const url = `http://localhost:5000/products`;
+        const url = ` https://glacial-coast-36884.herokuapp.com/products`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -30,7 +30,7 @@ const ProductAdd = () => {
             supplier: supplier
         }
 
-        fetch('http://localhost:5000/products', {
+        fetch(' https://glacial-coast-36884.herokuapp.com/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -41,8 +41,9 @@ const ProductAdd = () => {
             .then(result => {
                 console.log(result);
                 alert("Product Updated");
-                
+
             })
+        event.target.reset()
 
     }
 
@@ -53,12 +54,13 @@ const ProductAdd = () => {
             <div className='container  col-md-6 add-container'>
                 <h1 className='text-center my-4'>Add your Product</h1>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                    <input className=' add-form' placeholder='Photo Url' type="text" {...register("img")} />
-                    <input className=' add-form' placeholder='Product Name' {...register("name")} />
-                    <textarea className='add-form' placeholder='Description' {...register("description")} />
-                    <input className='add-form' placeholder='Price' type="number" {...register("price")} />
-                    <input className='add-form' placeholder='Quantity' type="number" {...register("quantity")} />
-                    <input className='add-form' placeholder='Supplier Name' {...register("supplier Name")} />
+                    <input className=' add-form' name='img' placeholder='Photo Url' type="text" {...register("img")} />
+                    <input className=' add-form' name='name' placeholder='Product Name' {...register("name")} />
+                    <textarea className='add-form'
+                        name='description' placeholder='Description' {...register("description")} />
+                    <input className='add-form' name='price' placeholder='Price' type="number" {...register("price")} />
+                    <input className='add-form' name='quantity' placeholder='Quantity' type="number" {...register("quantity")} />
+                    <input className='add-form' name='supplier name' placeholder='Supplier Name' {...register("supplier Name")} />
                     <input className='mb-2 w-50 mx-auto add-product' type="submit" value="Add products" />
                 </form>
             </div>

@@ -6,7 +6,7 @@ const DeliverProduct = () => {
     const [products, setProducts] = useState({})
     console.log(products);
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = ` https://glacial-coast-36884.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -14,7 +14,7 @@ const DeliverProduct = () => {
 
     const handleDeliverProduct = (event) => {
         const quantity = parseInt(products.quantity) - 1
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(` https://glacial-coast-36884.herokuapp.com/products/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

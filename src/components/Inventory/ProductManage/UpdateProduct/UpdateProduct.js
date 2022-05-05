@@ -7,7 +7,7 @@ const UpdateProduct = () => {
     const { id } = useParams();
     const [products, setProducts] = useState({})
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = ` https://glacial-coast-36884.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProducts(data))
@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         // const newQuantity = (quantity + parseInt(product.quantity))
         console.log(quantity);
 
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(` https://glacial-coast-36884.herokuapp.com/products/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

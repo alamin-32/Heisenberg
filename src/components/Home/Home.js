@@ -24,7 +24,7 @@ const Home = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
-            <Products></Products>
+            <Products home={true}></Products>
         </div>
     );
 };

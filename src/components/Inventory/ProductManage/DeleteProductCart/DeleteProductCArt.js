@@ -9,7 +9,7 @@ const DeleteProductCArt = ({ product }) => {
     const handleProductsDelete = id => {
         const proceed = window.confirm('Are you sure?')
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = ` https://glacial-coast-36884.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE',
             })
