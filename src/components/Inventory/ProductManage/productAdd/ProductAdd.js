@@ -14,21 +14,8 @@ const ProductAdd = () => {
     }, [products])
     // console.log(products);
 
-    const onSubmit = (event) => {
-        const name = event => event.target.name.value
-        const price = event => event.target.price.value
-        const img = event => event.target.img.value
-        const quantity = event => event.target.quantity.value
-        const description = event => event.target.description.value
-        const supplier = event => event.target.supplier.value
-        const data = {
-            name: name,
-            price: price,
-            img: img,
-            quantity: quantity,
-            description: description,
-            supplier: supplier
-        }
+    const onSubmit = (data) => {
+
 
         fetch(' https://glacial-coast-36884.herokuapp.com/products', {
             method: "POST",
@@ -43,7 +30,6 @@ const ProductAdd = () => {
                 alert("Product Updated");
 
             })
-        event.target.reset()
 
     }
 
@@ -60,7 +46,7 @@ const ProductAdd = () => {
                         name='description' placeholder='Description' {...register("description")} />
                     <input className='add-form' name='price' placeholder='Price' type="number" {...register("price")} />
                     <input className='add-form' name='quantity' placeholder='Quantity' type="number" {...register("quantity")} />
-                    <input className='add-form' name='supplier name' placeholder='Supplier Name' {...register("supplier Name")} />
+                    <input className='add-form' name='supplier' placeholder='Supplier' {...register("supplier")} />
                     <input className='mb-2 w-50 mx-auto add-product' type="submit" value="Add products" />
                 </form>
             </div>

@@ -7,7 +7,7 @@ const DeleteProductCArt = ({ product }) => {
     const { products, setProducts } = useProducts()
 
     const handleProductsDelete = id => {
-        const proceed = window.confirm('Are you sure?')
+        const proceed = window.confirm('Are tou Sure?')
         if (proceed) {
             const url = ` https://glacial-coast-36884.herokuapp.com/products/${id}`
             fetch(url, {

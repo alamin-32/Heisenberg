@@ -1,0 +1,21 @@
+.extra-1 {
+    text-align: center;
+    background-color: #F1F0EC;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.join {
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}

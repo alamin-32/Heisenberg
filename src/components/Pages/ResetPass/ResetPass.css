@@ -1,0 +1,12 @@
+.reset-btn {
+    background-color: #E8335D;
+    border: none;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    color: #ffffff; 
+}

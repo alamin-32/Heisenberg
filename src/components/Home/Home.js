@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import ExPart from '../ExPart-1/ExPart';
 import Products from '../Inventory/Products/Products';
 import './Home.css'
 
@@ -25,6 +26,7 @@ const Home = () => {
                 </Carousel>
             </div>
             <Products home={true}></Products>
+            <ExPart></ExPart>
         </div>
     );
 };
